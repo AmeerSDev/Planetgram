@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Planetgram"
+        xmlns:views="clr-namespace:Planetgram.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Planetgram" Height="470" Width="800">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,6 +14,11 @@
                 <GradientStop Color="#FF22668D" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <StackPanel Width="300" HorizontalAlignment="Left">
+            <views:UserView Height="434"/>
+        </StackPanel>
+        
+
 
     </Grid>
 </Window>

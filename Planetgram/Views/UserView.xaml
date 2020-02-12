@@ -16,8 +16,11 @@
                 <Separator></Separator>
                 <Label Content="Username" Foreground="White"/>
                 <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18"/>
-                <Label Content="Followers" Foreground="White"/>
-                <PasswordBox Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18"/>
+                
+                <Label Content="Followers:" Foreground="White"/>
+                <Label Content="Following:" Foreground="White"/>
+                <Label Content="Posts:" Foreground="White"/>
+                
                 <Button Name="btnScrape" Content="Scrape" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18"/>
             </StackPanel>
         </Border>

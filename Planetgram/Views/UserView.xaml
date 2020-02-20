@@ -15,13 +15,12 @@
                 <Label Content="Search Planets" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
                 <Separator></Separator>
                 <Label Content="Username" Foreground="White"/>
-                <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18"/>
-                
-                <Label Content="Followers:" Foreground="White"/>
-                <Label Content="Following:" Foreground="White"/>
-                <Label Content="Posts:" Foreground="White"/>
-                
-                <Button Name="btnScrape" Content="Scrape" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18"/>
+                <TextBox Text="{Binding IGUser.UserName , Mode=TwoWay}" Background="#545d6a" Foreground="White" FontSize="18"/>
+                <Label Content="Followers" Foreground="White"/>
+                <TextBox Text="{Binding IGUser.UserFollowers , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" />
+                <Label Content="Following" Foreground="White"/>
+                <TextBox Text="{Binding IGUser.UserFollowings , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}"/>
+                <Button Command = "{Binding ScrapeCommand}" Name="btnScrape" Content="Scrape" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18"/>
             </StackPanel>
         </Border>
     </Grid>

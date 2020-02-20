@@ -11,7 +11,7 @@ namespace Planetgram.ViewModel
 {
     public class UserViewModel
     {
-        private User igUser = new User();
+        private User igUser;
         private ObservableCollection<User> _users = new ObservableCollection<User>();
         public ICommandImp ScrapeCommand { get; set; }
 
@@ -22,7 +22,8 @@ namespace Planetgram.ViewModel
         }
         public UserViewModel()
         {
-                 ScrapeCommand = new ICommandImp(OnScrape,CanScrape);
+            igUser = new User();
+            ScrapeCommand = new ICommandImp(OnScrape,CanScrape);
             //   DisplayUser();
         }
         public User IGUser
@@ -39,21 +40,27 @@ namespace Planetgram.ViewModel
             }
         }
 
-        public void DisplayUser()
+        public void DisplayUser(User iu)
         {
 
-            if (_users != null)
+            if (iu != null)
             {
-                _users[0].UserName = IGUser.UserName;
-                _users[0].UserFollowers = IGUser.UserFollowers;
-                _users[0].UserFollowings = IGUser.UserFollowings;
+                igUser.UserName = iu.UserName;
+                igUser.UserFollowers = iu.UserFollowers;
+                igUser.UserFollowings = iu.UserFollowings;
             }
             else
                 return;
         }
         private async void OnScrape()
         {
-           igUser = await Scraper.ScrapeInstagram($"https://www.instagram.com//{igUser.UserName}/");
+            if (igUser != null)
+            {
+                User iu = await Scraper.ScrapeInstagram($"https://www.instagram.com/{igUser.UserName}/");
+                DisplayUser(iu);
+            }
+            else
+                return;
         }
 
         private bool CanScrape()

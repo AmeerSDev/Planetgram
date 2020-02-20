@@ -14,6 +14,7 @@ namespace Planetgram.Model
         private string userName;
         private string userPassword;
         private int userFollowers;
+        private int userFollowings;
         private byte[] userImage;
 
         public string UserName
@@ -56,6 +57,19 @@ namespace Planetgram.Model
                 {
                     userFollowers = value;
                     RaisePropertyChanged("UserFollowers");
+                }
+            }
+        }
+        public int UserFollowings
+        {
+            get { return userFollowings; }
+
+            set
+            {
+                if (userFollowings != value)
+                {
+                    userFollowings = value;
+                    RaisePropertyChanged("UserFollowings");
                 }
             }
         }

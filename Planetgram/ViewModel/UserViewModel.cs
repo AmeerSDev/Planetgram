@@ -24,7 +24,6 @@ namespace Planetgram.ViewModel
         {
             igUser = new User();
             ScrapeCommand = new ICommandImp(OnScrape,CanScrape);
-            //   DisplayUser();
         }
         public User IGUser
         {
@@ -45,7 +44,7 @@ namespace Planetgram.ViewModel
 
             if (iu != null)
             {
-                igUser.UserName = iu.UserName;
+                igUser.UserAlias = iu.UserAlias;
                 igUser.UserFollowers = iu.UserFollowers;
                 igUser.UserFollowings = iu.UserFollowings;
             }

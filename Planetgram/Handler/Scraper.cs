@@ -41,11 +41,11 @@ namespace Planetgram.Handler
                     // create an InstagramUser
                     var instagramUser = new User
                     {
-                        UserName = userProfile.full_name,
+                        UserAlias = userProfile.full_name,
                         UserFollowers = userProfile.edge_followed_by.count,
                         UserFollowings = userProfile.edge_follow.count
                     };
-                    Debug.Print($"Name: {instagramUser.UserName},Followers: {instagramUser.UserFollowers} , Following: {instagramUser.UserFollowings}");
+                    Debug.Print($"Name: {instagramUser.UserAlias},Followers: {instagramUser.UserFollowers} , Following: {instagramUser.UserFollowings}");
                     return instagramUser;
                 }
                 else

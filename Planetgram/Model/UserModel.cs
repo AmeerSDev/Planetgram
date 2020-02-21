@@ -12,7 +12,7 @@ namespace Planetgram.Model
     public class User : INotifyPropertyChanged
     {
         private string userName;
-        private string userPassword;
+        private string userAlias;
         private int userFollowers;
         private int userFollowings;
         private byte[] userImage;
@@ -33,20 +33,23 @@ namespace Planetgram.Model
                 }
             }
         }
-
-        public string UserPassword
+        public string UserAlias
         {
-            get { return userPassword; }
+            get
+            {
+                return userAlias;
+            }
 
             set
             {
-                if (userPassword != value)
+                if (userAlias != value)
                 {
-                    userPassword = value;
-                    RaisePropertyChanged("UserPassword");
+                    userAlias = value;
+                    RaisePropertyChanged("UserAlias");
                 }
             }
         }
+
         public int UserFollowers
         {
             get { return userFollowers; }

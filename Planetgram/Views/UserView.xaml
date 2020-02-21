@@ -16,10 +16,12 @@
                 <Separator></Separator>
                 <Label Content="Username" Foreground="White"/>
                 <TextBox Text="{Binding IGUser.UserName , Mode=TwoWay}" Background="#545d6a" Foreground="White" FontSize="18"/>
+                <Label Content="Name" Foreground="White"/>
+                <TextBox Text="{Binding IGUser.UserAlias , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" IsReadOnly="True"/>
                 <Label Content="Followers" Foreground="White"/>
-                <TextBox Text="{Binding IGUser.UserFollowers , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" />
+                <TextBox Text="{Binding IGUser.UserFollowers , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" IsReadOnly="True" />
                 <Label Content="Following" Foreground="White"/>
-                <TextBox Text="{Binding IGUser.UserFollowings , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}"/>
+                <TextBox Text="{Binding IGUser.UserFollowings , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" IsReadOnly="True"/>
                 <Button Command = "{Binding ScrapeCommand}" Name="btnScrape" Content="Scrape" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18"/>
             </StackPanel>
         </Border>

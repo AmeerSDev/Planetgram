@@ -17,7 +17,10 @@
         <StackPanel Width="300" HorizontalAlignment="Left">
             <views:UserView Height="434"/>
         </StackPanel>
-        
+        <StackPanel Width="291" HorizontalAlignment="Right">
+            <views:PlanetView Height="434" Margin="-183,0,0,0"/>
+        </StackPanel>
+
 
 
     </Grid>

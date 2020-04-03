@@ -11,6 +11,15 @@ namespace Planetgram.ViewModel
 {
     public class UserViewModel
     {
+        //TODO:Add Color Binding
+       /*-1 Unused 00000000
+          0 Poor ff9d9d9d
+          1 Common ffffffff
+          2 Uncommon ff1eff00
+          3 Rare ff0070dd
+          4 Epic ffa335ee
+          5 Legendary ffff8000
+          */
         private User igUser;
         private ObservableCollection<User> _users = new ObservableCollection<User>();
         public ICommandImp ScrapeCommand { get; set; }

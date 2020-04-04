@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Planetgram.Views"
+             xmlns:converters="clr-namespace:Planetgram.Converters"
              xmlns:viewModel="clr-namespace:Planetgram.ViewModel"
              xmlns:vml="clr-namespace:Planetgram.VML"
              vml:ViewModelLocator.AutoHookedUpViewModel = "True" 
@@ -15,6 +16,7 @@
              HorizontalAlignment="Stretch" x:Name="Grid1">
         <Grid.Resources>
             <viewModel:PlanetViewModel x:Key="SphereGeometrySource1"/>
+            <converters:FollowersCountToColorConverter x:Key="converter"/>
             <!--<local:SmallPlanet x:Key="SphereGeometrySource2"/>-->
             <MeshGeometry3D x:Key="SphereGeometry1" 
 
@@ -76,11 +78,8 @@
                                Geometry="{StaticResource SphereGeometry1}">
                             <GeometryModel3D.Material>
                                 <MaterialGroup>
-                                    <DiffuseMaterial>
-                                        <DiffuseMaterial.Brush>
-                                            <SolidColorBrush Color="#FF3BCAFF"/>
-                                        </DiffuseMaterial.Brush>
-                                    </DiffuseMaterial>
+                                    <DiffuseMaterial Brush="{Binding Planet.Color,Converter={StaticResource converter}}" />
+                                    <!--<DiffuseMaterial Brush="{Binding Planet.Radius ,Converter={StaticResource converter}}"/>-->
                                 </MaterialGroup>
                             </GeometryModel3D.Material>
                             <!-- The Transform specifies how to transform the 3D object. The properties of the

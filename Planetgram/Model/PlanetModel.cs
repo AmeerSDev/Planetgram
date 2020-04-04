@@ -14,11 +14,11 @@ namespace Planetgram.Model
     {
         private int r;
         private int n;
-        private string color;
+        private int color;
         private Point3DCollection points;
         private Int32Collection triangleIndices;
 
-        public string Color
+        public int Color
         {
             get
             {

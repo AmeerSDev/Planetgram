@@ -56,6 +56,7 @@ namespace Planetgram.ViewModel
                 igUser.UserAlias = iu.UserAlias;
                 igUser.UserFollowers = iu.UserFollowers;
                 igUser.UserFollowings = iu.UserFollowings;
+                PlanetViewModel.planet.Color = igUser.UserFollowers;
             }
             else
                 return;

@@ -11,8 +11,8 @@ namespace Planetgram.ViewModel
 {
     public class PlanetViewModel
     {
-        private Planet planet;
-        private ObservableCollection<Planet> _planets = new ObservableCollection<Planet>();
+        public static Planet planet;
+
         public PlanetViewModel()
         {
             planet = new Planet();

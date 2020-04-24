@@ -16,13 +16,67 @@
                 <Separator></Separator>
                 <Label Content="Username" Foreground="White"/>
                 <TextBox Text="{Binding IGUser.UserName , Mode=TwoWay}" Background="#545d6a" Foreground="White" FontSize="18"/>
-                <Label Content="Name" Foreground="White"/>
+                <Label Content="Alias" Foreground="White"/>
                 <TextBox Text="{Binding IGUser.UserAlias , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" IsReadOnly="True"/>
                 <Label Content="Followers" Foreground="White"/>
                 <TextBox Text="{Binding IGUser.UserFollowers , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" IsReadOnly="True" />
                 <Label Content="Following" Foreground="White"/>
                 <TextBox Text="{Binding IGUser.UserFollowings , Mode=TwoWay}" Background="{x:Null}" Foreground="White" FontSize="18" BorderBrush="{x:Null}" IsReadOnly="True"/>
                 <Button Command = "{Binding ScrapeCommand}" Name="btnScrape" Content="Scrape" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18"/>
+                <Separator></Separator>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label Content="Unsed" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="Black"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                    <Label Content="Novice" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="White"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                    <Label Content="Poor" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="#ff9d9d9d"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                    <Label Content="Rare" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="#ff0070dd"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                    <Label Content="Epic" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="#ffa335ee"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label Content="Legendary" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="#ffff8000"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                    <Label Content="Artifact" Foreground="White"/>
+                    <Rectangle
+                        Width="15"
+                        Height="15"
+                        Fill="#e6cc80"
+                        Canvas.Left="10"
+                        Canvas.Top="25" />
+                </WrapPanel>
             </StackPanel>
         </Border>
     </Grid>

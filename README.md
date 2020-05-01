@@ -1,5 +1,5 @@
 # Planetgram
-Desktop app that based on the Instagram API shows your followers as residents on your planet
+Desktop app that based on the Instagram API shows your followers as a color of your planet , the colors represent the rarity of the planet
 the app idea was inspired by John Fish from Youtube who is harvad CS student.
 
 [I Coded 20,000,000 Trees for #TeamTrees - By John Fish](https://www.youtube.com/watch?v=SNdtMjkRVrU)

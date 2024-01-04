@@ -11,10 +11,6 @@ the app idea was inspired by John Fish from Youtube who is harvad CS student.
 
 -Implementing of Web Scraping in C#.
 
--Implementing Dependency Injection in C#.
-
--Setting up a DB and connecting it to MySQL.
-
 -Unit Testing.
 
 -Extendable application.
